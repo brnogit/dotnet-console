@@ -45,9 +45,35 @@
 //         break;
 // }
 
-var valores = Console.ReadLine(); // "1 2 3 4 5"
-var matrizValores = valores.Split(" "); // 0, 1, 2, 3, 4
+// var valores = Console.ReadLine(); // "1 2 3 4 5"
+// var matrizValores = valores.Split(" "); // 0, 1, 2, 3, 4
 
-for (var i = 0; i < matrizValores.Length; i++) {
-    Console.WriteLine(matrizValores[i]);
+// Console.WriteLine("Utilizando For.");
+// for (var i = 0; i < matrizValores.Length; i++) {
+//     Console.WriteLine(matrizValores[i]);
+// }
+
+// var contador = 0;
+
+// Console.WriteLine("Utilizando While.");
+// while (contador  < matrizValores.Length) {
+//     Console.WriteLine(matrizValores[contador]);
+
+//     contador++;
+// }
+
+var notasTurma = new List<int> { 10, 5, 2, 3, 10, 4, 3, 2, 7, 2, 5, 1, 4 };
+
+var existeNota1 = notasTurma.Any( n => n == 1);
+var primeiroNota10 = notasTurma.First( n => n  == 10);
+var singleNota1 = notasTurma.Single( n => n == 1);
+var max = notasTurma.Max();
+var min = notasTurma.Min();
+var sum = notasTurma.Sum();
+var media = notasTurma.Average();
+//var ordered = notasTurma.OrderBy(n => n);
+var ordered = notasTurma.OrderByDescending(n => n);
+
+foreach (var nota in ordered) {
+    Console.WriteLine(nota);
 }
